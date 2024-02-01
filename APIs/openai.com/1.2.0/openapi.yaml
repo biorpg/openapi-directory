@@ -1,6 +1,6 @@
 openapi: 3.0.0
 servers:
-  - url: https://api.openai.com/v1
+  - url: http://192.168.2.3:5002/v1
 info:
   description: APIs for sampling from and fine-tuning language models
   title: OpenAI API
@@ -44,7 +44,7 @@ paths:
       x-oaiMeta:
         examples:
           curl: |
-            curl https://api.openai.com/v1/answers \
+            curl http://192.168.2.3:5002/v1/answers \
               -X POST \
               -H "Authorization: Bearer YOUR_API_KEY" \
               -H 'Content-Type: application/json' \
@@ -145,7 +145,7 @@ paths:
         beta: true
         examples:
           curl: |
-            curl https://api.openai.com/v1/audio/transcriptions \
+            curl http://192.168.2.3:5002/v1/audio/transcriptions \
               -X POST \
               -H 'Authorization: Bearer TOKEN' \
               -H 'Content-Type: multipart/form-data' \
@@ -202,7 +202,7 @@ paths:
         beta: true
         examples:
           curl: |
-            curl https://api.openai.com/v1/audio/translations \
+            curl http://192.168.2.3:5002/v1/audio/translations \
                 -X POST \
                 -H 'Authorization: Bearer TOKEN' \
                 -H 'Content-Type: multipart/form-data' \
@@ -259,7 +259,7 @@ paths:
         beta: true
         examples:
           curl: |
-            curl https://api.openai.com/v1/chat/completions \
+            curl http://192.168.2.3:5002/v1/chat/completions \
               -H 'Content-Type: application/json' \
               -H 'Authorization: Bearer YOUR_API_KEY' \
               -d '{
@@ -351,7 +351,7 @@ paths:
       x-oaiMeta:
         examples:
           curl: |
-            curl https://api.openai.com/v1/classifications \
+            curl http://192.168.2.3:5002/v1/classifications \
               -X POST \
               -H "Authorization: Bearer YOUR_API_KEY" \
               -H 'Content-Type: application/json' \
@@ -459,7 +459,7 @@ paths:
       x-oaiMeta:
         examples:
           curl: |
-            curl https://api.openai.com/v1/completions \
+            curl http://192.168.2.3:5002/v1/completions \
               -H 'Content-Type: application/json' \
               -H 'Authorization: Bearer YOUR_API_KEY' \
               -d '{
@@ -547,7 +547,7 @@ paths:
       x-oaiMeta:
         examples:
           curl: |
-            curl https://api.openai.com/v1/edits \
+            curl http://192.168.2.3:5002/v1/edits \
               -H 'Content-Type: application/json' \
               -H 'Authorization: Bearer YOUR_API_KEY' \
               -d '{
@@ -622,7 +622,7 @@ paths:
       x-oaiMeta:
         examples:
           curl: |
-            curl https://api.openai.com/v1/embeddings \
+            curl http://192.168.2.3:5002/v1/embeddings \
               -X POST \
               -H "Authorization: Bearer YOUR_API_KEY" \
               -H "Content-Type: application/json" \
@@ -692,7 +692,7 @@ paths:
       x-oaiMeta:
         examples:
           curl: |
-            curl https://api.openai.com/v1/engines \
+            curl http://192.168.2.3:5002/v1/engines \
               -H 'Authorization: Bearer YOUR_API_KEY'
           node.js: |
             const { Configuration, OpenAIApi } = require("openai");
@@ -759,7 +759,7 @@ paths:
       x-oaiMeta:
         examples:
           curl: |
-            curl https://api.openai.com/v1/engines/VAR_model_id \
+            curl http://192.168.2.3:5002/v1/engines/VAR_model_id \
               -H 'Authorization: Bearer YOUR_API_KEY'
           node.js: |
             const { Configuration, OpenAIApi } = require("openai");
@@ -819,7 +819,7 @@ paths:
       x-oaiMeta:
         examples:
           curl: |
-            curl https://api.openai.com/v1/engines/davinci/search \
+            curl http://192.168.2.3:5002/v1/engines/davinci/search \
               -H "Content-Type: application/json" \
               -H 'Authorization: Bearer YOUR_API_KEY' \
               -d '{
@@ -893,7 +893,7 @@ paths:
       x-oaiMeta:
         examples:
           curl: |
-            curl https://api.openai.com/v1/files \
+            curl http://192.168.2.3:5002/v1/files \
               -H 'Authorization: Bearer YOUR_API_KEY'
           node.js: |
             const { Configuration, OpenAIApi } = require("openai");
@@ -954,7 +954,7 @@ paths:
       x-oaiMeta:
         examples:
           curl: |
-            curl https://api.openai.com/v1/files \
+            curl http://192.168.2.3:5002/v1/files \
               -H "Authorization: Bearer YOUR_API_KEY" \
               -F purpose="fine-tune" \
               -F file='@mydata.jsonl'
@@ -1012,7 +1012,7 @@ paths:
       x-oaiMeta:
         examples:
           curl: |
-            curl https://api.openai.com/v1/files/file-XjGxS3KTG0uNmNOK362iJua3 \
+            curl http://192.168.2.3:5002/v1/files/file-XjGxS3KTG0uNmNOK362iJua3 \
               -X DELETE \
               -H 'Authorization: Bearer YOUR_API_KEY'
           node.js: |
@@ -1058,7 +1058,7 @@ paths:
       x-oaiMeta:
         examples:
           curl: |
-            curl https://api.openai.com/v1/files/file-XjGxS3KTG0uNmNOK362iJua3 \
+            curl http://192.168.2.3:5002/v1/files/file-XjGxS3KTG0uNmNOK362iJua3 \
               -H 'Authorization: Bearer YOUR_API_KEY'
           node.js: |
             const { Configuration, OpenAIApi } = require("openai");
@@ -1107,7 +1107,7 @@ paths:
       x-oaiMeta:
         examples:
           curl: |
-            curl https://api.openai.com/v1/files/file-XjGxS3KTG0uNmNOK362iJua3/content \
+            curl http://192.168.2.3:5002/v1/files/file-XjGxS3KTG0uNmNOK362iJua3/content \
               -H 'Authorization: Bearer YOUR_API_KEY' > file.jsonl
           node.js: |
             const { Configuration, OpenAIApi } = require("openai");
@@ -1141,7 +1141,7 @@ paths:
       x-oaiMeta:
         examples:
           curl: |
-            curl https://api.openai.com/v1/fine-tunes \
+            curl http://192.168.2.3:5002/v1/fine-tunes \
               -H 'Authorization: Bearer YOUR_API_KEY'
           node.js: |
             const { Configuration, OpenAIApi } = require("openai");
@@ -1206,7 +1206,7 @@ paths:
       x-oaiMeta:
         examples:
           curl: |
-            curl https://api.openai.com/v1/fine-tunes \
+            curl http://192.168.2.3:5002/v1/fine-tunes \
               -X POST \
               -H "Content-Type: application/json" \
               -H "Authorization: Bearer YOUR_API_KEY" \
@@ -1295,7 +1295,7 @@ paths:
       x-oaiMeta:
         examples:
           curl: |
-            curl https://api.openai.com/v1/fine-tunes/ft-AF1WoRqd3aJAHsqc9NY7iL8F \
+            curl http://192.168.2.3:5002/v1/fine-tunes/ft-AF1WoRqd3aJAHsqc9NY7iL8F \
               -H "Authorization: Bearer YOUR_API_KEY"
           node.js: |
             const { Configuration, OpenAIApi } = require("openai");
@@ -1408,7 +1408,7 @@ paths:
       x-oaiMeta:
         examples:
           curl: |
-            curl https://api.openai.com/v1/fine-tunes/ft-AF1WoRqd3aJAHsqc9NY7iL8F/cancel \
+            curl http://192.168.2.3:5002/v1/fine-tunes/ft-AF1WoRqd3aJAHsqc9NY7iL8F/cancel \
               -X POST \
               -H "Authorization: Bearer YOUR_API_KEY"
           node.js: |
@@ -1492,7 +1492,7 @@ paths:
       x-oaiMeta:
         examples:
           curl: |
-            curl https://api.openai.com/v1/fine-tunes/ft-AF1WoRqd3aJAHsqc9NY7iL8F/events \
+            curl http://192.168.2.3:5002/v1/fine-tunes/ft-AF1WoRqd3aJAHsqc9NY7iL8F/events \
               -H "Authorization: Bearer YOUR_API_KEY"
           node.js: |
             const { Configuration, OpenAIApi } = require("openai");
@@ -1568,7 +1568,7 @@ paths:
         beta: true
         examples:
           curl: |
-            curl https://api.openai.com/v1/images/edits \
+            curl http://192.168.2.3:5002/v1/images/edits \
               -H 'Authorization: Bearer YOUR_API_KEY' \
               -F image='@otter.png' \
               -F mask='@mask.png' \
@@ -1637,7 +1637,7 @@ paths:
         beta: true
         examples:
           curl: |
-            curl https://api.openai.com/v1/images/generations \
+            curl http://192.168.2.3:5002/v1/images/generations \
               -H 'Content-Type: application/json' \
               -H 'Authorization: Bearer YOUR_API_KEY' \
               -d '{
@@ -1709,7 +1709,7 @@ paths:
         beta: true
         examples:
           curl: |
-            curl https://api.openai.com/v1/images/variations \
+            curl http://192.168.2.3:5002/v1/images/variations \
               -H 'Authorization: Bearer YOUR_API_KEY' \
               -F image='@otter.png' \
               -F n=2 \
@@ -1765,7 +1765,7 @@ paths:
       x-oaiMeta:
         examples:
           curl: |
-            curl https://api.openai.com/v1/models \
+            curl http://192.168.2.3:5002/v1/models \
               -H 'Authorization: Bearer YOUR_API_KEY'
           node.js: |
             const { Configuration, OpenAIApi } = require("openai");
@@ -1830,7 +1830,7 @@ paths:
       x-oaiMeta:
         examples:
           curl: |
-            curl https://api.openai.com/v1/models/curie:ft-acmeco-2021-03-03-21-44-20 \
+            curl http://192.168.2.3:5002/v1/models/curie:ft-acmeco-2021-03-03-21-44-20 \
               -X DELETE \
               -H "Authorization: Bearer YOUR_API_KEY"
           node.js: |
@@ -1877,7 +1877,7 @@ paths:
       x-oaiMeta:
         examples:
           curl: |
-            curl https://api.openai.com/v1/models/VAR_model_id \
+            curl http://192.168.2.3:5002/v1/models/VAR_model_id \
               -H 'Authorization: Bearer YOUR_API_KEY'
           node.js: |
             const { Configuration, OpenAIApi } = require("openai");
@@ -1923,7 +1923,7 @@ paths:
       x-oaiMeta:
         examples:
           curl: |
-            curl https://api.openai.com/v1/moderations \
+            curl http://192.168.2.3:5002/v1/moderations \
               -H 'Content-Type: application/json' \
               -H 'Authorization: Bearer YOUR_API_KEY' \
               -d '{
